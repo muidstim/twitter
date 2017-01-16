@@ -9,12 +9,13 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../CS/SW/twitter api/lib/twitter4j-core-4.0.4.jar!/" />
+          <root url="jar://C:/../../CS/SW/twitter api/lib/twitter4j-core-4.0.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="twitter4j-core-4.0.4" level="project" />
   </component>
 </module>
