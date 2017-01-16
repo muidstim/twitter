@@ -8,22 +8,33 @@ public class Main {
 
     public static void main(String args[]) throws Exception {
 
-        //sendTweet("Hello it's me #muidstim");
-        readTimeline();
-        searchTweets("donald trump");
-
-
     }
 
     /*
      This method reads from your timeline
      */
-    private static void readTimeline() throws Exception {
+    private static void readHomeTimeline() throws Exception {
 
         Twitter twitter = TwitterFactory.getSingleton();
         List<Status> statuses = twitter.getHomeTimeline();
 
         System.out.println("Showing home timeline.");
+        for (Status status : statuses) {
+            System.out.println(status.getUser().getName() + ":" +
+                    status.getText());
+        }
+    }
+
+
+    /*
+     This method reads from the specified user's timeline
+     */
+    private static void readUserTimeline(String user) throws Exception {
+
+        Twitter twitter = TwitterFactory.getSingleton();
+        List<Status> statuses = twitter.getUserTimeline(user);
+
+        System.out.println("Showing user timeline for " + user);
         for (Status status : statuses) {
             System.out.println(status.getUser().getName() + ":" +
                     status.getText());
